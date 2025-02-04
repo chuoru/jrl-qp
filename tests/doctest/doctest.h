@@ -4083,9 +4083,9 @@ namespace {
         }
     };
 
-    bool             FatalConditionHandler::isSet = false;
+    bool             FatalConditionHandler::isSet                                      = false;
     struct sigaction FatalConditionHandler::oldSigActions[DOCTEST_COUNTOF(signalDefs)] = {};
-    stack_t          FatalConditionHandler::oldSigStack = {};
+    stack_t          FatalConditionHandler::oldSigStack                                = {};
     size_t           FatalConditionHandler::altStackSize = 4 * SIGSTKSZ;
     char*            FatalConditionHandler::altStackMem = nullptr;
 
